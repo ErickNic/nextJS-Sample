@@ -12,7 +12,7 @@ const loggedUser = {
 export default function Home() {
   const [useData,setUserData] = useState();
   useEffect(()=>{
-    axios.get('https://lmao-6wqv.onrender.com',/* loggedUser */).then(response=>setUserData(response.data))
+    axios.get('https://lmao-6wqv.onrender.com/user/login',loggedUser).then(response=>setUserData(response.data))
   },[]);
   useEffect(()=>{
     console.log(useData)
